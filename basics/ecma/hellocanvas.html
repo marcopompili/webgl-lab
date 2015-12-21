@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Hello Canvas</title>
+    </head>
+    <body>
+        <h1>Clear a canvas</h1>
+        <canvas id="webgl" width="400" height="400"></canvas>
+        <script type="text/javascript">
+            var webgl = document.getElementById('webgl');
+
+            var gl = webgl.getContext('webgl');
+
+            if (!gl) {
+                console.log('Failed to get the rendering context for WebGL');
+            }
+            else
+            {
+                gl.clearColor(0.5, 0.5, 0.5, 1.0);
+                gl.clear(gl.COLOR_BUFFER_BIT)
+            }
+        </script>
+    </body>
+</html>
